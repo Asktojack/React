@@ -1,0 +1,41 @@
+Step 1: Create a New React Application 
+1. npx create-react-app react-props-demo
+2. cd react-props-demo
+Step 2: Define the Components 
+1. App Component (Parent Component)  
+import React from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import './App.css';
+function App() {
+  const title = "Welcome to My React App";
+  const tagline = "Building great apps with React";
+  const copyright = "© 2025 MyApp, All Rights Reserved";
+  return (
+    <div className="App">
+      <Header title={title} />
+      <Footer tagline={tagline} copyright={copyright} />
+    </div>
+  ); }
+export default App;
+2. Header Component (Child Component)  
+import React from 'react';
+function Header(props) {
+  return (
+    <header>
+      <h1>{props.title}</h1>
+    </header>
+  ); }
+export default Header;
+3. Footer Component (Child Component)  
+import React from 'react';
+function Footer(props) {
+  return (
+    <footer>
+      <p>{props.tagline}</p>
+      <p>{props.copyright}</p>
+    </footer>
+  ); }
+export default Footer;
+Step 4: Run the application 
+npm start
